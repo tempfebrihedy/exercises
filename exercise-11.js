@@ -1,24 +1,29 @@
 
 function changeMe(arr) {
-    for (var i=0; i<arr.length; i++) {
-        var tahunLahir = arr[i][3];
-        // console.log(tahunLahir);
-        var age = '';
-        if (tahunLahir < 0 || tahunLahir == undefined) { // atau === ??
-            age = 'Invalid Birth Year';
-        } else if (tahunLahir >= 0) {
-            age = 2018 - tahunLahir;
-        } 
-        // console.log(age);
-        
-        var baru = { // var nya beda2 ato ga?
-            firstName: arr[i][0],
-            lastName: arr[i][1],
-            gender: arr[i][2],
-            age: age,
+    if (arr.length === 0) {
+        console.log('');
+    }
+    else {
+        for (var i=0; i<arr.length; i++) {
+            var tahunLahir = arr[i][3];
+            // console.log(tahunLahir);
+            var age = '';
+            if (tahunLahir < 0 || tahunLahir == undefined) { // atau === ??
+                age = 'Invalid Birth Year';
+            } else if (tahunLahir >= 0) {
+                age = 2018 - tahunLahir;
+            } 
+            // console.log(age);
+            
+            var baru = { // var nya beda2 ato ga?
+                firstName: arr[i][0],
+                lastName: arr[i][1],
+                gender: arr[i][2],
+                age: age,
+            }
+            console.log((i+1) + '. ' + baru.firstName + ' ' + baru.lastName); // manual kayak gini emang?
+            console.log(baru);
         }
-        console.log((i+1) + '. ' + baru.firstName + ' ' + baru.lastName); // manual kayak gini emang?
-        console.log(baru);
     }
 }
   
@@ -34,6 +39,8 @@ function changeMe(arr) {
   //   gender: 'Male',
   //   age: 'Invalid Birth Year' }
   changeMe([]); // ""
+
+
 
 
   /*

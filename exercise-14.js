@@ -1,7 +1,6 @@
 function sorting(arrNumber) {
-    return result = arrNumber.sort(function(a, b) { return a < b});
+    return result = arrNumber.sort(function(a, b) { return b - a});
 }
-  
 
 
 function getTotal(arrNumber) {
@@ -40,6 +39,7 @@ console.log(mostFrequentLargestNumbers([1, 1, 1, 1]));
 console.log(mostFrequentLargestNumbers([]));
 //   //''
 
+console.log(mostFrequentLargestNumbers([10, 10, 2, 8, 4, 6, 8, 5, 8, 4, 5]));
 
 
   /*
